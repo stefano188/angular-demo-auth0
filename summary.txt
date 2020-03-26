@@ -1,0 +1,13 @@
+
+# Auth0 
+https://auth0.com/
+
+Login with Google
+
+
+# Install Auth0
+npm install @auth0/auth0-spa-js --save
+
+# JWT 
+npm install @auth0/angular-jwt
+
