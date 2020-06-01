@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Subscribable, Subscription, Subject, pipe } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { AuthTokenService } from '../services/auth-token.service';
 
 @Component({
   selector: 'nav-bar',
@@ -8,10 +11,27 @@ import { AuthService } from '../services/auth.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(public auth: AuthService) { }
+  /* constructor(public auth: AuthService) { } */
+  /* constructor(public authServiceToken: AuthTokenService) { } */
+
+  constructor() { }
 
   ngOnInit() {
-    //this.auth.loggedIn
+    
   }
+
+  ngOnDestroy() {
+    
+  }
+
+  /* showProfile(userProfile) {
+    console.log('showing profile ', userProfile);
+    if (this.auth.loggedIn) {
+      console.log('user is logged');
+      this.auth.userProfile$.subscribe(user => {
+        console.log('user', user);
+      });
+    }
+  } */
 
 }

@@ -85,6 +85,7 @@ export class AuthService {
   }
 
   private handleAuthCallback() {
+    console.log('handleAuthCallback');
     // Call when app reloads after user logs in with Auth0
     const params = window.location.search;
     if (params.includes('code=') && params.includes('state=')) {
@@ -103,6 +104,9 @@ export class AuthService {
           ]);
         })
       );
+      
+      
+
       // Subscribe to authentication completion observable
       // Response will be an array of user and login status
       authComplete$.subscribe(([user, loggedIn]) => {

@@ -1,0 +1,20 @@
+
+<div>
+    Auth0 Login with a valid JWT ID Token
+    <br/>
+    User is authenticated {{ authServiceToken.isAuthenticated() }}
+    <br/>
+    <button class="btn btn-primary" (click)="authServiceToken.login()" *ngIf="!authServiceToken.isAuthenticated()" >Log In</button>&nbsp;
+    <button class="btn btn-primary" (click)="authServiceToken.logout()" *ngIf="authServiceToken.isAuthenticated()" >Log Out</button>&nbsp;
+    <button class="btn btn-secondary" (click)="showProfile()" *ngIf="authServiceToken.isAuthenticated()" >Show Profile</button>&nbsp;
+    <button class="btn btn-secondary" (click)="callApi()" *ngIf="authServiceToken.isAuthenticated()" >Call secured API</button>&nbsp;
+    <!-- <button class="btn btn-secondary" (click)="updateProfile()" *ngIf="authServiceToken.isAuthenticated()" >Update Profile</button> -->
+</div>
+<div class="container" *ngIf="authServiceToken.userProfile">
+    <ul class="list-group">
+        <li class="list-group-item">email: {{ authServiceToken.userProfile.email }}</li>
+        <li class="list-group-item">name: {{ authServiceToken.userProfile.name }}</li>
+        <li class="list-group-item">nickname: {{ authServiceToken.userProfile.nickname }}</li>
+    </ul>
+    
+</div>

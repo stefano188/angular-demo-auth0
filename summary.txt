@@ -11,3 +11,138 @@ npm install @auth0/auth0-spa-js --save
 # JWT 
 npm install @auth0/angular-jwt
 
+# Auth0 Lock (access_token, id_token)
+https://github.com/auth0/lock
+
+
+# Angular 8 JWT Login Tutorial
+https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial
+
+
+##############################
+##############################
+##############################
+
+user 
+{given_name: "Stefano", family_name: "Mazzolini", nickname: "stefano.mazzolini", name: "Stefano Mazzolini", picture: "https://lh3.googleusercontent.com/-ACgkFUULg3U/AAA…AAAA/AMZuuckdh77Wr-k2HkhV-CAihsYoZTr23A/photo.jpg", …}
+given_name: "Stefano"
+family_name: "Mazzolini"
+nickname: "stefano.mazzolini"
+name: "Stefano Mazzolini"
+picture: "https://lh3.googleusercontent.com/-ACgkFUULg3U/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckdh77Wr-k2HkhV-CAihsYoZTr23A/photo.jpg"
+locale: "en"
+updated_at: "2020-05-28T13:48:56.924Z"
+email: "stefano.mazzolini@lc-sw.com"
+email_verified: true
+sub: "google-oauth2|109580524381305545949"
+
+
+**********************
+AuthO Lock AuthResult
+
+# Get ID Token with Auth0 Lock
+https://community.auth0.com/t/if-you-are-using-auth0-lock-and-trying-to-get-a-jwt-token-returned/12102
+
+authResult 
+{accessToken: "50LIgQ6lZ22Ewx9BR6BEydQ02hBpQtdj", idToken: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUST…4RocTnIvT__bLOHouasavtKhvND9VJjhZ2pdtxjzQQg8D1lrQ", idTokenPayload: {…}, appState: null, refreshToken: null, …}
+accessToken: "50LIgQ6lZ22Ewx9BR6BEydQ02hBpQtdj"
+idToken: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUSTFOelk0TnpKR1FqUTJOamcwUWpJMk9VRkZRVVEyTnpnNFFqYzFOVEV6UkVFMU5qRXhSQSJ9.eyJnaXZlbl9uYW1lIjoiU3RlZmFubyIsImZhbWlseV9uYW1lIjoiTWF6em9saW5pIiwibmlja25hbWUiOiJzdGVmYW5vLm1henpvbGluaSIsIm5hbWUiOiJTdGVmYW5vIE1henpvbGluaSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vLUFDZ2tGVVVMZzNVL0FBQUFBQUFBQUFJL0FBQUFBQUFBQUFBL0FNWnV1Y2tkaDc3V3ItazJIa2hWLUNBaWhzWW9aVHIyM0EvcGhvdG8uanBnIiwibG9jYWxlIjoiZW4iLCJ1cGRhdGVkX2F0IjoiMjAyMC0wNS0yOVQxMTo1MTo0NS44MzdaIiwiZW1haWwiOiJzdGVmYW5vLm1henpvbGluaUBsYy1zdy5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9kZXYtdjI0cWk1aWIuZXUuYXV0aDAuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTA5NTgwNTI0MzgxMzA1NTQ1OTQ5IiwiYXVkIjoiM2VmdGRPVWwySHRKemI3aTV4ZzBVbThRYkNTOTJkYUUiLCJpYXQiOjE1OTA3NTMxMDUsImV4cCI6MTU5MDc4OTEwNSwiYXRfaGFzaCI6ImlLVk9La1ZkMVRKRFpqX3g0YTRGOXciLCJub25jZSI6InlON0NsU3JnQm9UZEJ3bHRRUTc4clJlOFlUflREWElnIn0.G1po6r0NtudlrZ_DFfH0v8iEZ4V6i4Nm7sg1jEd0TwKH0X6NSVlbTInlHR8M4nMifXpsAHMadyrhXIExqMNcYi5N6uCGkHtkRLIOjje5mBYAgm0A6phUj4NxkRmnJWfzF04ilKZa_6bW0XSSZAlOeE5FG-sjzTfTu3N1nqCrRzIc3l5F4Cmo2wKaQUwTTUY9kIXkOBmyTcMTkSMfeipClH1D12zqFyF0Li_-VPVdaKssCG57OXoHhWiCLzdlNkhzbsQTwbJgDScx4GZViEcJ_7CX0CMraDonJwQoM4RocTnIvT__bLOHouasavtKhvND9VJjhZ2pdtxjzQQg8D1lrQ"
+idTokenPayload: {given_name: "Stefano", family_name: "Mazzolini", nickname: "stefano.mazzolini", name: "Stefano Mazzolini", picture: "https://lh3.googleusercontent.com/-ACgkFUULg3U/AAA…AAAA/AMZuuckdh77Wr-k2HkhV-CAihsYoZTr23A/photo.jpg", …}
+appState: null
+refreshToken: null
+state: "S7JZJ06TwKE4bqXAO6RZuwc.hLGMDkGk"
+expiresIn: 7200
+tokenType: "Bearer"
+scope: "openid profile email"
+
+decoded token 
+{given_name: "Stefano", family_name: "Mazzolini", nickname: "stefano.mazzolini", name: "Stefano Mazzolini", picture: "https://lh3.googleusercontent.com/-ACgkFUULg3U/AAA…AAAA/AMZuuckdh77Wr-k2HkhV-CAihsYoZTr23A/photo.jpg", …}
+given_name: "Stefano"
+family_name: "Mazzolini"
+nickname: "stefano.mazzolini"
+name: "Stefano Mazzolini"
+picture: "https://lh3.googleusercontent.com/-ACgkFUULg3U/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckdh77Wr-k2HkhV-CAihsYoZTr23A/photo.jpg"
+locale: "en"
+updated_at: "2020-05-29T12:07:20.900Z"
+email: "stefano.mazzolini@lc-sw.com"
+email_verified: true
+iss: "https://dev-v24qi5ib.eu.auth0.com/"
+sub: "google-oauth2|109580524381305545949"
+aud: "3eftdOUl2HtJzb7i5xg0Um8QbCS92daE"
+iat: 1590754040
+exp: 1590790040
+at_hash: "QL5B46nf03Ose94QU81h7g"
+nonce: "7K0oHYeOm8UH~ikgcEnmIaATryv02dY8"
+
+
+
+CALL TO GET PROFILE
+auth-token.service.ts:51 ERROR Getting profile {original: Error: Unauthorized
+    at Request.<anonymous> (http://localhost:4200/vendor.js:93131:28845)
+    at…, statusCode: 401, statusText: "Unauthorized", code: "unauthorized", description: "invalid credentials"}
+
+
+
+CALL TO GET USER INFO
+auth-token.service.ts:68 GOT Profile 
+{sub: "google-oauth2|109580524381305545949", given_name: "Stefano", family_name: "Mazzolini", nickname: "stefano.mazzolini", name: "Stefano Mazzolini", …}
+sub: "google-oauth2|109580524381305545949"
+given_name: "Stefano"
+family_name: "Mazzolini"
+nickname: "stefano.mazzolini"
+name: "Stefano Mazzolini"
+picture: "https://lh3.googleusercontent.com/-ACgkFUULg3U/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckdh77Wr-k2HkhV-CAihsYoZTr23A/photo.jpg"
+locale: "en"
+updated_at: "2020-05-29T14:24:43.446Z"
+email: "stefano.mazzolini@lc-sw.com"
+email_verified: true
+
+
+
+# Sample
+# Asking Auth0 for tokens from my application
+curl --request POST \
+  --url https://dev-v24qi5ib.eu.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"MHav9UWp4Q1PXdBVzFrwovRjSypU2dEb","client_secret":"wTwFyeb0yl6-yQn-4fm-yBHqbRdeopbxfe58lPR999K3XU2611ZFdQJ6bv4qeegM","audience":"http://api.secure-demo.com","grant_type":"client_credentials"}'
+
+Response
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUSTFOelk0TnpKR1FqUTJOamcwUWpJMk9VRkZRVVEyTnpnNFFqYzFOVEV6UkVFMU5qRXhSQSJ9.eyJpc3MiOiJodHRwczovL2Rldi12MjRxaTVpYi5ldS5hdXRoMC5jb20vIiwic3ViIjoiTUhhdjlVV3A0UTFQWGRCVnpGcndvdlJqU3lwVTJkRWJAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9hcGkuc2VjdXJlLWRlbW8uY29tIiwiaWF0IjoxNTkwNzY3NjI5LCJleHAiOjE1OTA4NTQwMjksImF6cCI6Ik1IYXY5VVdwNFExUFhkQlZ6RnJ3b3ZSalN5cFUyZEViIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.cGS7hcp3m3q3j4ix3eQyZaS8Ar9F5eZmDfmw4ddrikF8vf1GHvO40AgcG5OoVuJMpcvv1jU3ZsLForAogyUteW2ZNaY2E9wydNQsmRCFmH0TLU-pYm8_tlE6BPhZHQCKTXhFJUWZOniV9kJrongSxuNbzNgv5RaGBFC0JzJyF-jDJOvrIqoU00JDqJPEeriLLYoC7kbf5MOLVEe3ryFm51t4fYi8GU-Zdxx0vtTLT6_TFg-0iXqJo2bbusnZ0_sDw1NAI0Q86Oldna6Uzii9vW_QLAGbN6ESfTMmrahNJoZ8-U0ViFB4dlYprDyfMZdqDXzzRt1JZBhjfGcL4NXBvQ",
+  "token_type": "Bearer"
+}
+
+Sending the token to the API
+curl --request GET \
+  --url http://path_to_your_api/ \
+  --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUSTFOelk0TnpKR1FqUTJOamcwUWpJMk9VRkZRVVEyTnpnNFFqYzFOVEV6UkVFMU5qRXhSQSJ9.eyJpc3MiOiJodHRwczovL2Rldi12MjRxaTVpYi5ldS5hdXRoMC5jb20vIiwic3ViIjoiTUhhdjlVV3A0UTFQWGRCVnpGcndvdlJqU3lwVTJkRWJAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9hcGkuc2VjdXJlLWRlbW8uY29tIiwiaWF0IjoxNTkwNzY3NjI5LCJleHAiOjE1OTA4NTQwMjksImF6cCI6Ik1IYXY5VVdwNFExUFhkQlZ6RnJ3b3ZSalN5cFUyZEViIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.cGS7hcp3m3q3j4ix3eQyZaS8Ar9F5eZmDfmw4ddrikF8vf1GHvO40AgcG5OoVuJMpcvv1jU3ZsLForAogyUteW2ZNaY2E9wydNQsmRCFmH0TLU-pYm8_tlE6BPhZHQCKTXhFJUWZOniV9kJrongSxuNbzNgv5RaGBFC0JzJyF-jDJOvrIqoU00JDqJPEeriLLYoC7kbf5MOLVEe3ryFm51t4fYi8GU-Zdxx0vtTLT6_TFg-0iXqJo2bbusnZ0_sDw1NAI0Q86Oldna6Uzii9vW_QLAGbN6ESfTMmrahNJoZ8-U0ViFB4dlYprDyfMZdqDXzzRt1JZBhjfGcL4NXBvQ'
+
+
+# Node js
+
+# Asking Auth0 for tokens from my application
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://dev-v24qi5ib.eu.auth0.com/oauth/token',
+  headers: { 'content-type': 'application/json' },
+  body: '{"client_id":"MHav9UWp4Q1PXdBVzFrwovRjSypU2dEb","client_secret":"wTwFyeb0yl6-yQn-4fm-yBHqbRdeopbxfe58lPR999K3XU2611ZFdQJ6bv4qeegM","audience":"http://api.secure-demo.com","grant_type":"client_credentials"}' };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+Sending the token to the API
+var request = require("request");
+
+var options = { method: 'GET',
+  url: 'http://path_to_your_api/',
+  headers: { authorization: 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUSTFOelk0TnpKR1FqUTJOamcwUWpJMk9VRkZRVVEyTnpnNFFqYzFOVEV6UkVFMU5qRXhSQSJ9.eyJpc3MiOiJodHRwczovL2Rldi12MjRxaTVpYi5ldS5hdXRoMC5jb20vIiwic3ViIjoiTUhhdjlVV3A0UTFQWGRCVnpGcndvdlJqU3lwVTJkRWJAY2xpZW50cyIsImF1ZCI6Imh0dHA6Ly9hcGkuc2VjdXJlLWRlbW8uY29tIiwiaWF0IjoxNTkwNzY3NjI5LCJleHAiOjE1OTA4NTQwMjksImF6cCI6Ik1IYXY5VVdwNFExUFhkQlZ6RnJ3b3ZSalN5cFUyZEViIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.cGS7hcp3m3q3j4ix3eQyZaS8Ar9F5eZmDfmw4ddrikF8vf1GHvO40AgcG5OoVuJMpcvv1jU3ZsLForAogyUteW2ZNaY2E9wydNQsmRCFmH0TLU-pYm8_tlE6BPhZHQCKTXhFJUWZOniV9kJrongSxuNbzNgv5RaGBFC0JzJyF-jDJOvrIqoU00JDqJPEeriLLYoC7kbf5MOLVEe3ryFm51t4fYi8GU-Zdxx0vtTLT6_TFg-0iXqJo2bbusnZ0_sDw1NAI0Q86Oldna6Uzii9vW_QLAGbN6ESfTMmrahNJoZ8-U0ViFB4dlYprDyfMZdqDXzzRt1JZBhjfGcL4NXBvQ' } };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});

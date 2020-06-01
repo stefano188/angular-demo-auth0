@@ -1,0 +1,11 @@
+
+<div>
+    <button class="btn btn-primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+    <button class="btn btn-primary" (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+    loggedIn: {{ auth.loggedIn }}
+</div>
+<div *ngIf="auth.userProfile$ | async as userProfile ">
+    {{ userProfile.nickname }}
+    <br/><br/>
+    <button (click)="showProfile(userProfile)">Show Profile</button>
+</div>
