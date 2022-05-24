@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.14",
     "@auth0/angular-jwt": "^4.0.0",
     "@auth0/auth0-spa-js": "^1.6.5",
-    "auth0-lock": "^11.24.1",
+    "auth0-lock": "^11.33.0",
     "bootstrap": "^4.5.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
